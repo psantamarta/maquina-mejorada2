@@ -88,9 +88,15 @@ public class MaquinaExpendedoraMejorada {
     } 
     
     public int vaciarDineroDeLaMaquina (){
-        int importeTotalMaquina = balanceClienteActual + totalDineroAcumulado;
-        balanceClienteActual = 0;
-        totalDineroAcumulado = 0;
-        return importeTotalMaquina;
+       int DineroADevolver = -1;
+       if (balanceClienteActual == 0){
+           DineroADevolver = totalDineroAcumulado;
+           totalDineroAcumulado = 0;    
+       }
+       else{
+           System.out.println
+           ("Termine la gestión en curso antes de vaciar la máquina");
+       }
+       return DineroADevolver;
     }
 }
