@@ -87,7 +87,7 @@ public class MaquinaExpendedoraMejorada {
                 // Cuenta el numero de billetes que se van vendiendo
                 contadorBilletesVendidos ++;  
 
-                if (maquinaConPremio == true){
+                if (maquinaConPremio == true && contadorBilletesVendidos % 3 == 0){
                     System.out.println("Tienes un descuento de " +
                         (precioBillete*0.1) + "€ para compras en el comercio que quieras");
                 }
